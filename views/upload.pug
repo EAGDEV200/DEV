@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h1 Formulário de Upload
+  form(action="/upload", method="POST", enctype="multipart/form-data")
+    label(for="id") ID:
+    input(type="text", name="id", id="id", required)
+
+    label(for="nome") Nome:
+    input(type="text", name="Nome", id="nome", required)
+
+    label(for="sobrenome") Sobrenome:
+    input(type="text", name="Sobrenome", id="sobrenome", required)
+
+    label(for="dataNascimento") Data de Nascimento:
+    input(type="date", name="DataNascimento", id="dataNascimento", required)
+
+    label(for="telefone") Telefone:
+    input(type="tel", name="Telefone", id="telefone", required)
+
+    label(for="endereco") Endereço:
+    input(type="text", name="Endereço", id="endereco", required)
+
+    label(for="cidade") Cidade:
+    input(type="text", name="Cidade", id="cidade", required)
+
+    label(for="estado") Estado:
+    input(type="text", name="Estado", id="estado", required)
+
+    label(for="status") Status:
+    select(name="Status", id="status", required)
+      option(value="ativo") Ativo
+      option(value="inativo") Inativo
+
+    label(for="imagem") Imagem de Perfil:
+    input(type="file", name="imagem", id="imagem", required)
+
+    input(type="submit", value="Salvar")
